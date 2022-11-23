@@ -5,7 +5,7 @@ module.exports = {
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
   base: '/TIL/',
-  title: 'Vuepress Docs Boilerplate',
+  title: '👀 Ory',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -35,8 +35,12 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: 'Docker 🐳',
+        link: '/docker/',
+      },
+      {
+        text: 'S3 ♻️',
+        link: '/SimpleStorage/',
       },
       {
         text: 'Guide',
@@ -52,6 +56,26 @@ module.exports = {
       }
     ],
     sidebar: {
+      '/docker/': [
+        {
+          title: 'Docker',
+          collapsable: false,
+          children: [
+            '',
+            'using-docker',
+          ]
+        }
+      ],
+      '/SimpleStorage/': [
+        {
+          title: 'S3',
+          collapsable: false,
+          children: [
+            '',
+            'using-simple',
+          ]
+        }
+      ],
       '/guide/': [
         {
           title: 'Guide',
