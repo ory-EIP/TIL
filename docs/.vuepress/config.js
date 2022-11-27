@@ -39,6 +39,18 @@ module.exports = {
         link: '/docker/',
       },
       {
+        text: 'Kubernetes 🐋',
+        link: '/Kuber/',
+      },
+      {
+        text: 'Nginx',
+        link: '/Nginx/',
+      },
+      {
+        text: 'Gunicorn 🦄',
+        link: '/Gunicorn/',
+      },
+      {
         text: 'S3 ♻️',
         link: '/SimpleStorage/',
       },
