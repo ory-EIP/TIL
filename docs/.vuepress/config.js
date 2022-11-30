@@ -75,6 +75,7 @@ module.exports = {
           children: [
             '',
             'using-docker',
+            'docker-compose-command'
           ]
         }
       ],
