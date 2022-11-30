@@ -78,6 +78,36 @@ module.exports = {
           ]
         }
       ],
+      '/Kuber/': [
+        {
+          title: 'Kubernetes',
+          collapsable: false,
+          children: [
+            '',
+            'using-kuber',
+          ]
+        }
+      ],
+      '/Nginx/': [
+        {
+          title: 'Nginx',
+          collapsable: false,
+          children: [
+            '',
+            'using-nginx',
+          ]
+        }
+      ],
+      '/Gunicorn/': [
+        {
+          title: 'Gunicorn',
+          collapsable: false,
+          children: [
+            '',
+            'using-gunicorn',
+          ]
+        }
+      ],
       '/SimpleStorage/': [
         {
           title: 'S3',
