@@ -55,6 +55,10 @@ module.exports = {
         link: '/SimpleStorage/',
       },
       {
+        text: '🗼 Modbus',
+        link: '/modbus/',
+      },
+      {
         text: 'Guide',
         link: '/guide/',
       },
@@ -116,6 +120,17 @@ module.exports = {
           children: [
             '',
             'using-simple',
+          ]
+        }
+      ],
+      '/modbus/': [
+        {
+          title: 'Guide',
+          collapsable: false,
+          children: [
+            '',
+            'using-modbus',
+            'using-modbus-tcp'
           ]
         }
       ],
