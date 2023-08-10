@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Using PostgreSQL | 👀 Ory</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/TIL/assets/css/0.styles.da161f38.css" as="style"><link rel="preload" href="/TIL/assets/js/app.a2b2a8a8.js" as="script"><link rel="preload" href="/TIL/assets/js/2.e8b61e28.js" as="script"><link rel="preload" href="/TIL/assets/js/29.75a4558f.js" as="script"><link rel="prefetch" href="/TIL/assets/js/10.c427effe.js"><link rel="prefetch" href="/TIL/assets/js/11.b132ee45.js"><link rel="prefetch" href="/TIL/assets/js/12.16a7a9fb.js"><link rel="prefetch" href="/TIL/assets/js/13.50b0f261.js"><link rel="prefetch" href="/TIL/assets/js/14.b079f2a8.js"><link rel="prefetch" href="/TIL/assets/js/15.277db580.js"><link rel="prefetch" href="/TIL/assets/js/16.9ba2ac09.js"><link rel="prefetch" href="/TIL/assets/js/17.5e986fab.js"><link rel="prefetch" href="/TIL/assets/js/18.b396a0c3.js"><link rel="prefetch" href="/TIL/assets/js/19.78e062a8.js"><link rel="prefetch" href="/TIL/assets/js/20.d089dd45.js"><link rel="prefetch" href="/TIL/assets/js/21.93adfb65.js"><link rel="prefetch" href="/TIL/assets/js/22.f03a0910.js"><link rel="prefetch" href="/TIL/assets/js/23.a7f20d01.js"><link rel="prefetch" href="/TIL/assets/js/24.dcee8bd5.js"><link rel="prefetch" href="/TIL/assets/js/25.5973a1ce.js"><link rel="prefetch" href="/TIL/assets/js/26.f39b1725.js"><link rel="prefetch" href="/TIL/assets/js/27.de72b3e5.js"><link rel="prefetch" href="/TIL/assets/js/28.c9d03f24.js"><link rel="prefetch" href="/TIL/assets/js/3.2a857a69.js"><link rel="prefetch" href="/TIL/assets/js/4.2d71a063.js"><link rel="prefetch" href="/TIL/assets/js/5.f1b790bf.js"><link rel="prefetch" href="/TIL/assets/js/6.42be9825.js"><link rel="prefetch" href="/TIL/assets/js/7.e9bda6f7.js"><link rel="prefetch" href="/TIL/assets/js/8.7ada73b9.js"><link rel="prefetch" href="/TIL/assets/js/9.8f355434.js">
+    <link rel="stylesheet" href="/TIL/assets/css/0.styles.da161f38.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/TIL/" class="home-link router-link-active"><!----> <span class="site-name">👀 Ory</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/TIL/postgresql/" class="nav-link router-link-active">
+  PostgreSQL 🙈
+</a></div><div class="nav-item"><a href="/TIL/docker/" class="nav-link">
+  Docker 🐳
+</a></div><div class="nav-item"><a href="/TIL/Kuber/" class="nav-link">
+  Kubernetes 🐋
+</a></div><div class="nav-item"><a href="/TIL/Nginx/" class="nav-link">
+  Nginx
+</a></div><div class="nav-item"><a href="/TIL/Gunicorn/" class="nav-link">
+  Gunicorn 🦄
+</a></div><div class="nav-item"><a href="/TIL/SimpleStorage/" class="nav-link">
+  S3 ♻️
+</a></div><div class="nav-item"><a href="/TIL/modbus/" class="nav-link">
+  🗼 Modbus
+</a></div><div class="nav-item"><a href="/TIL/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/TIL/config/" class="nav-link">
+  Config
+</a></div><div class="nav-item"><a href="https://v1.vuepress.vuejs.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/TIL/postgresql/" class="nav-link router-link-active">
+  PostgreSQL 🙈
+</a></div><div class="nav-item"><a href="/TIL/docker/" class="nav-link">
+  Docker 🐳
+</a></div><div class="nav-item"><a href="/TIL/Kuber/" class="nav-link">
+  Kubernetes 🐋
+</a></div><div class="nav-item"><a href="/TIL/Nginx/" class="nav-link">
+  Nginx
+</a></div><div class="nav-item"><a href="/TIL/Gunicorn/" class="nav-link">
+  Gunicorn 🦄
+</a></div><div class="nav-item"><a href="/TIL/SimpleStorage/" class="nav-link">
+  S3 ♻️
+</a></div><div class="nav-item"><a href="/TIL/modbus/" class="nav-link">
+  🗼 Modbus
+</a></div><div class="nav-item"><a href="/TIL/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/TIL/config/" class="nav-link">
+  Config
+</a></div><div class="nav-item"><a href="https://v1.vuepress.vuejs.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>PostgreSQL</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/TIL/postgresql/" aria-current="page" class="sidebar-link">Introduction</a></li><li><a href="/TIL/postgresql/using-postgresql.html" aria-current="page" class="active sidebar-link">Using PostgreSQL</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/TIL/postgresql/using-postgresql.html#postgresql" class="sidebar-link">PostgreSQL</a></li><li class="sidebar-sub-header"><a href="/TIL/postgresql/using-postgresql.html#" class="sidebar-link"></a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="using-postgresql"><a href="#using-postgresql" class="header-anchor">#</a> Using PostgreSQL</h1> <h2 id="postgresql"><a href="#postgresql" class="header-anchor">#</a> PostgreSQL</h2> <h3 id="postgresql-images-pull"><a href="#postgresql-images-pull" class="header-anchor">#</a> postgresql images pull</h3> <p>사용할 PostgreSQL 버전을 선택했다면,
+버전에 맞게 postgresql 이미지를 pull받으면 된다.</p> <div class="language- extra-class"><pre class="language-text"><code>docker pull postgres:latest
+</code></pre></div><h3 id="postgresql-docker-run"><a href="#postgresql-docker-run" class="header-anchor">#</a> postgresql docker run</h3> <p>port는 5432(default)로 지정하고 이름과 데이터베이스 비밀번호를 입력하고 타임존은 설정하고 싶다면 <code>-e TZ=Asia/Seoul</code>로 지정하면된다.</p> <div class="language- extra-class"><pre class="language-text"><code>docker run -p 5432:5432 --name postgres -e POSTGRES_PASSWORD=12341234 -d postgres:latest
+</code></pre></div><h3 id="postgresql-setting"><a href="#postgresql-setting" class="header-anchor">#</a> postgresql setting</h3> <h3 id="enter-the-container-postgresql"><a href="#enter-the-container-postgresql" class="header-anchor">#</a> enter the container postgresql</h3> <div class="language- extra-class"><pre class="language-text"><code>docker exec -it [CONTAINER ID] bash
+</code></pre></div><p>로그인</p> <div class="language-angular2html extra-class"><pre class="language-text"><code>psql -U postgres
+</code></pre></div><h3 id="database-생성"><a href="#database-생성" class="header-anchor">#</a> database 생성</h3> <div class="language- extra-class"><pre class="language-text"><code>create database test_db;
+</code></pre></div><h3 id="계정-생성-user-및-권한-설정"><a href="#계정-생성-user-및-권한-설정" class="header-anchor">#</a> 계정 생성(User) 및 권한 설정</h3> <div class="language-angular2html extra-class"><pre class="language-text"><code>create role test_user with login password 'test1234';
+
+alter user test_user with createdb;
+alter user test_user with superuser;
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>\du
+
+                                   List of roles
+ Role name |                         Attributes                         | Member of
+-----------+------------------------------------------------------------+-----------
+ postgres  | Superuser, Create role, Create DB, Replication, Bypass RLS | {}
+ test_user | Superuser, Create DB    
+</code></pre></div><h3 id="데이터베이스에-접근-권한-주기"><a href="#데이터베이스에-접근-권한-주기" class="header-anchor">#</a> 데이터베이스에 접근 권한 주기</h3> <div class="language- extra-class"><pre class="language-text"><code>grant all privileges on database test_db to test_user;
+</code></pre></div><h2 id=""><a href="#" class="header-anchor">#</a></h2></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/TIL/postgresql/" class="prev router-link-active">
+        Introduction
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/TIL/assets/js/app.a2b2a8a8.js" defer></script><script src="/TIL/assets/js/2.e8b61e28.js" defer></script><script src="/TIL/assets/js/29.75a4558f.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Using Docker | 👀 Ory</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/TIL/assets/css/0.styles.da161f38.css" as="style"><link rel="preload" href="/TIL/assets/js/app.a2b2a8a8.js" as="script"><link rel="preload" href="/TIL/assets/js/2.e8b61e28.js" as="script"><link rel="preload" href="/TIL/assets/js/23.a7f20d01.js" as="script"><link rel="prefetch" href="/TIL/assets/js/10.c427effe.js"><link rel="prefetch" href="/TIL/assets/js/11.b132ee45.js"><link rel="prefetch" href="/TIL/assets/js/12.16a7a9fb.js"><link rel="prefetch" href="/TIL/assets/js/13.50b0f261.js"><link rel="prefetch" href="/TIL/assets/js/14.b079f2a8.js"><link rel="prefetch" href="/TIL/assets/js/15.277db580.js"><link rel="prefetch" href="/TIL/assets/js/16.9ba2ac09.js"><link rel="prefetch" href="/TIL/assets/js/17.5e986fab.js"><link rel="prefetch" href="/TIL/assets/js/18.b396a0c3.js"><link rel="prefetch" href="/TIL/assets/js/19.78e062a8.js"><link rel="prefetch" href="/TIL/assets/js/20.d089dd45.js"><link rel="prefetch" href="/TIL/assets/js/21.93adfb65.js"><link rel="prefetch" href="/TIL/assets/js/22.f03a0910.js"><link rel="prefetch" href="/TIL/assets/js/24.dcee8bd5.js"><link rel="prefetch" href="/TIL/assets/js/25.5973a1ce.js"><link rel="prefetch" href="/TIL/assets/js/26.f39b1725.js"><link rel="prefetch" href="/TIL/assets/js/27.de72b3e5.js"><link rel="prefetch" href="/TIL/assets/js/28.c9d03f24.js"><link rel="prefetch" href="/TIL/assets/js/29.75a4558f.js"><link rel="prefetch" href="/TIL/assets/js/3.2a857a69.js"><link rel="prefetch" href="/TIL/assets/js/4.2d71a063.js"><link rel="prefetch" href="/TIL/assets/js/5.f1b790bf.js"><link rel="prefetch" href="/TIL/assets/js/6.42be9825.js"><link rel="prefetch" href="/TIL/assets/js/7.e9bda6f7.js"><link rel="prefetch" href="/TIL/assets/js/8.7ada73b9.js"><link rel="prefetch" href="/TIL/assets/js/9.8f355434.js">
+    <link rel="stylesheet" href="/TIL/assets/css/0.styles.da161f38.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/TIL/" class="home-link router-link-active"><!----> <span class="site-name">👀 Ory</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/TIL/postgresql/" class="nav-link">
+  PostgreSQL 🙈
+</a></div><div class="nav-item"><a href="/TIL/docker/" class="nav-link router-link-active">
+  Docker 🐳
+</a></div><div class="nav-item"><a href="/TIL/Kuber/" class="nav-link">
+  Kubernetes 🐋
+</a></div><div class="nav-item"><a href="/TIL/Nginx/" class="nav-link">
+  Nginx
+</a></div><div class="nav-item"><a href="/TIL/Gunicorn/" class="nav-link">
+  Gunicorn 🦄
+</a></div><div class="nav-item"><a href="/TIL/SimpleStorage/" class="nav-link">
+  S3 ♻️
+</a></div><div class="nav-item"><a href="/TIL/modbus/" class="nav-link">
+  🗼 Modbus
+</a></div><div class="nav-item"><a href="/TIL/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/TIL/config/" class="nav-link">
+  Config
+</a></div><div class="nav-item"><a href="https://v1.vuepress.vuejs.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/TIL/postgresql/" class="nav-link">
+  PostgreSQL 🙈
+</a></div><div class="nav-item"><a href="/TIL/docker/" class="nav-link router-link-active">
+  Docker 🐳
+</a></div><div class="nav-item"><a href="/TIL/Kuber/" class="nav-link">
+  Kubernetes 🐋
+</a></div><div class="nav-item"><a href="/TIL/Nginx/" class="nav-link">
+  Nginx
+</a></div><div class="nav-item"><a href="/TIL/Gunicorn/" class="nav-link">
+  Gunicorn 🦄
+</a></div><div class="nav-item"><a href="/TIL/SimpleStorage/" class="nav-link">
+  S3 ♻️
+</a></div><div class="nav-item"><a href="/TIL/modbus/" class="nav-link">
+  🗼 Modbus
+</a></div><div class="nav-item"><a href="/TIL/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/TIL/config/" class="nav-link">
+  Config
+</a></div><div class="nav-item"><a href="https://v1.vuepress.vuejs.org" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Docker</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/TIL/docker/" aria-current="page" class="sidebar-link">Introduction</a></li><li><a href="/TIL/docker/using-docker.html" aria-current="page" class="active sidebar-link">Using Docker</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/TIL/docker/using-docker.html#docker-container" class="sidebar-link">docker container</a></li><li class="sidebar-sub-header"><a href="/TIL/docker/using-docker.html#docker-container를-외부에-노출" class="sidebar-link">docker container를 외부에 노출</a></li></ul></li><li><a href="/TIL/docker/docker-compose-command.html" class="sidebar-link">Docker Compose Command</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="using-docker"><a href="#using-docker" class="header-anchor">#</a> Using Docker</h1> <h2 id="docker-container"><a href="#docker-container" class="header-anchor">#</a> docker container</h2> <blockquote><ul><li>CONTAINER ID
+<ul><li>컨테이터에게 자동으로 할당되는 고유한 ID</li> <li>출력은 고유 ID의 12자리만 나오지만, 전체 정보를 확인하기 위해서 <code>docker inspect</code>를 사용하면 전체 ID를 확인할 수 있다.</li></ul></li> <li>IMAGE
+<ul><li>컨테이너를 생성할 때 사용된 이미지 이름</li> <li>[이미지 이름]:[이미지 버전] 형식으로 출력됨</li></ul></li> <li>COMMAND
+<ul><li>컨테이너가 시작될 때 실행되는 명령어</li> <li>대부분 이미지에 미리 내장돼있어 별도로 설정할 필요는 없음</li> <li>이미지에 내장된 커맨드는 docker run이나 create 명령어의 맨 끝에 입력해서 컨테이너를 생성할 때 덮어 쓸 수 있음</li></ul></li> <li>CREATED
+<ul><li>컨테이너가 실행되고 난 뒤 흐른 시간을 나타냄</li></ul></li> <li>STATUS
+<ul><li>컨테이너의 상태를 나태냄</li> <li>실행중이면, &quot;Up&quot;, 종료된 상태면 &quot;Exited&quot;, 일시 중지된 상태면 &quot;Pause&quot;등을 나타냄</li></ul></li> <li>PORTS
+<ul><li>컨테이너가 개뱅한 포트와 호스트에 연결된 포트를 나열함</li> <li>컨테이너를 생성할 때 외부에 노출하도록 설정하지 않으면 ps에서 나타나지 않음</li></ul></li> <li>NAMES
+<ul><li>컨테이너의 고유한 이름</li> <li>--name 옵션으로 이름을 설정하지 않으면 도커 엔진이 임의로 형용사와 명사를 무작위로 조합해 이름을 설정함</li> <li>컨테이너의 이름은 중복될 수는 없지만 docker rename 명령어로 이름을 변경할 수 있음</li></ul></li></ul></blockquote> <h2 id="docker-container를-외부에-노출"><a href="#docker-container를-외부에-노출" class="header-anchor">#</a> docker container를 외부에 노출</h2> <p>컨테이너는 vm과 마찬가지로 가상 IP주소를 부여받는데, 기본적으로 도커 컨테이너에 172.17.0.x의 IP를 순차적으로 할당한다.</p> <p>컨테이너를 생성할 때 다른 설정을 하지 않았으면 외부에서 컨테이너에 접근할 수 없으며, 도커가 설치된 호스트에서만 접근할 수 있다.(예외로 Docker Desktop for Mac에서는 호스트에서 컨테이너 IP로의 접근이 불가능하다.)
+외부에 컨테이너의 애플리케이션을 노출하기 위해서는 <code>eth0</code>의 IP와 포트를 호스트의 IP와 포트에 <strong>바인</strong>딩해야 한다.</p> <p>포트 바인딩 하는 방법은 컨테이너를 실행할 때 <code>-p</code> 옵션으로 IP와 포트를 바인딩 해 연결할 수 있게 설정한다.</p> <p>docker run -i -t -p [호스트의 포트]:[컨테이너의 포트] [이미지 이름]:[이미지 버전]
+호스트의 7777번 포트를 컨테이너의 80번 포트와 연결하려면 -p [port]:80과 같이 입력한다.
+특정 IP를 사용하려면 -p 192.xxx.x.xxx:[port]:80과 같이 바인딩할 IP와 포트를 명시한다.</p> <p>docker run -i -t -p 3306:3306 -p 192.xxx.x.xxx:[port]:80 ubuntu:14.04
+위와 같이 -p 옵션은 여러번 사용이 가능하다.</p> <blockquote><p>-p 80과 같이 입력하면 컨테이너의 80번 포트를 쓸 수 있는 호스트의 포트 중 하나와 연결한다.
+그러나 이와 같이 입력하면 컨테이너를 생성하는 시점에서 호스트의 어느 포트와 연결됐는지 알 수 없으므로 docker ps 명령어를 통해 포트 항목을 확인해야 한다.</p></blockquote></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/TIL/docker/" class="prev router-link-active">
+        Introduction
+      </a></span> <span class="next"><a href="/TIL/docker/docker-compose-command.html">
+        Docker Compose Command
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/TIL/assets/js/app.a2b2a8a8.js" defer></script><script src="/TIL/assets/js/2.e8b61e28.js" defer></script><script src="/TIL/assets/js/23.a7f20d01.js" defer></script>
+  </body>
+</html>
